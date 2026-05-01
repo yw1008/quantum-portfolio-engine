@@ -1,48 +1,44 @@
 # Quantum Portfolio Optimization Engine
 
 Quantum Portfolio Optimization Engine is a Python research project for exploring
-portfolio construction methods that combine classical optimization baselines with
-future quantum optimization experiments.
+portfolio construction methods that combine classical optimization baselines
+with future quantum optimization experiments.
 
-The project is currently in its initial research-foundation phase. Optimization
-routines and research experiments have not been implemented yet.
+## Current Status
 
-## Folder Structure
+The project is in Phase 1: building the research foundation. Current
+capabilities include historical market data loading and basic return
+calculations.
 
-```text
-backend/
-  __init__.py
-  data/
-    __init__.py
-  classical/
-    __init__.py
-  analysis/
-    __init__.py
-tests/
-  __init__.py
-notebooks/
+## Roadmap
+
+- Phase 1: Data loading, return calculations, covariance estimation, and
+  classical portfolio optimization foundations.
+- Phase 2: Portfolio objective modeling and constraint handling.
+- Phase 3: Quantum optimization formulation and solver experiments.
+- Phase 4: Comparative analysis, reporting, and research notebooks.
+
+## Tech Stack
+
+- Python
+- pandas
+- yfinance
+- pytest
+- Jupyter notebooks
+
+## Quick Start
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pytest
 ```
 
-- `backend/data`: Data loading, preprocessing, and dataset utilities.
-- `backend/classical`: Classical optimization baselines and comparison methods.
-- `backend/analysis`: Experiment analysis, metrics, and reporting helpers.
-- `tests`: Test suite for project modules.
-- `notebooks`: Research notebooks and exploratory analysis.
+## Documentation
 
-## Phase 1 Goal
+Detailed project notes live in `docs/`.
 
-Phase 1 focuses on establishing a clean research foundation: project structure,
-dependency hygiene, and space for classical portfolio optimization experiments
-before introducing quantum optimization components.
-
-### Market Data Loading
-
-Phase 1 includes an initial market data loader at `backend/data/market_data.py`.
-It uses yfinance to fetch historical adjusted close prices for one or more
-tickers and returns a clean pandas DataFrame indexed by date.
-
-### Return Calculations
-
-Phase 1 also includes return utilities at `backend/data/returns.py` for
-computing daily percentage returns from price data and annualized mean returns
-from daily returns.
+- Architecture decisions: `docs/architecture.md`
+- Development log: `docs/development-log.md`
+- Learning notes: `docs/learning/`
