@@ -40,3 +40,9 @@ before introducing quantum optimization components.
 Phase 1 includes an initial market data loader at `backend/data/market_data.py`.
 It uses yfinance to fetch historical adjusted close prices for one or more
 tickers and returns a clean pandas DataFrame indexed by date.
+
+### Return Calculations
+
+Phase 1 also includes return utilities at `backend/data/returns.py` for
+computing daily percentage returns from price data and annualized mean returns
+from daily returns.
